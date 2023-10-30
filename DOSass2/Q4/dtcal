@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define the month and year
+month=3
+year=2022
+
+# Get the current date
+date=$(date +"%d %B %Y")
+
+# Get the calendar for the specified month and year
+calendar=$(cal $month $year)
+
+# Display the date and calendar
+echo "Date: $date"
+echo -e "Calendar:\n$calendar"

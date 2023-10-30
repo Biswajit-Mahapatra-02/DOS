@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Check if a filename is provided as an argument
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+# Get the filename from the argument
+filename=$1
+
+# Check if the file exists
+if [ ! -f "$filename" ]; then
+    echo "Error: File '$filename' not found."
+    exit 1
+fi
+
+# Get line count, word count, and character count
+echo -e "filename\tlinecount\twordcount\tcharcount"
+line_count=$(wc -l < "$filename")
+word_count=$(wc -w < "$filename")
+char_count=$(wc -c < "$filename")
+
+# Display the information in the specified format
+echo -e "$filename\t\t$line_count\t\t$word_count\t\t$char_count"

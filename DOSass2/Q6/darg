@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# $# is used to determine the number of arguments provided to the script 
+echo "Number of arguments provided: $#"
+
+# $@ represents all the arguments provided to the script
+# Iterating through all the arguments
+for arg in "$@"
+do
+	echo "Argument: $arg"
+done

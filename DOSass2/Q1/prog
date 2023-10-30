@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Merge and sort files a.txt, b.txt and c.txt, then save the result in a file called 'result'
+cat a.txt b.txt c.txt | sort -n > result
+
+# Display the sorted output on the screen
+cat result
